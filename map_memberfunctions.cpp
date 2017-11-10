@@ -47,6 +47,9 @@ erase(iterator position) – Removes the element at the position pointed by the 
     m.erase(key);
     (or)
     m.erase(m.find(key),m.find(key1)) or m.erase(m.find(key),m.end()) or m.erase(m.begin()m.find(key))
+    **** remember above erases [m.find(key),m.find(key1))
+
+
 clear() – Removes all the elements from the map
      *** don't foget to do it ***
 key_comp() / value_comp() – Returns the object that determines how the elements in the map are ordered (‘<' by default)
@@ -54,7 +57,10 @@ find(const g) – Returns an iterator to the element with key value ‘g’ in t
     eg:-
     m.find(key);
 count(const g) – Returns the number of matches to element with key value ‘g’ in the map
-lower_bound(const g) – Returns an iterator to the first element that is equivalent to mapped value with key value ‘g’ or definitely will not go before the element with key value ‘g’ in the map
-upper_bound(const g) – Returns an iterator to the first element that is equivalent to mapped value with key value ‘g’ or definitely will go after the element with key value ‘g’ in the map
+lower_bound(const g) – Returns an iterator to the first element that is equivalent to mapped value with key value ‘g’
+points to element with key value ‘g’ in the map
+
+upper_bound(const g) – Returns an iterator to the first element that is equivalent to mapped value with key value ‘g’
+points to element after the element with key value ‘g’ in the map
 
 */
